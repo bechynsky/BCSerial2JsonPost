@@ -8,6 +8,7 @@ import configparser
 # if URL contains % use %%
 # [DEFAULT]
 # URL = https://...
+# COM = /dev/tty...
 
 configuration = configparser.ConfigParser()
 configuration.read('config.ini')
@@ -15,7 +16,7 @@ configuration.read('config.ini')
 
 # This is URL from Request trigger
 URL = configuration['DEFAULT']['URL']
-PORT_NAME = "/dev/ttyUSB0" # check your serial port
+PORT_NAME = configuration['DEFAULT']['COM']
 
 # This is reqired by Request trigger
 HEADER = {'Content-Type': 'application/json'}

@@ -9,12 +9,9 @@ import configparser
 # [DEFAULT]
 # URL = https://...
 # COM = /dev/tty...
-
 configuration = configparser.ConfigParser()
 configuration.read('config.ini')
 
-
-# This is URL from Request trigger
 URL = configuration['DEFAULT']['URL']
 PORT_NAME = configuration['DEFAULT']['COM']
 

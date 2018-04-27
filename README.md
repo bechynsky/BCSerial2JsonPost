@@ -1,2 +1,13 @@
 # BCSerial2JsonPost
-Script reads payload from BigClown USB dongle using serial port and sends payload to URL using JSON format and HTTP POST method.
+
+This script is mainly for school project. Idea is to reduce need of computer setup. Script reads data directly from [BigClown USB Dongel](https://www.bigclown.com/doc/interfaces/serial-port-json/). Data from USB Dongle are transformed to JSON object and send to URL using POST method. It is usable for differend integration platforms like [Microsoft Flow](https://flow.microsoft.com/).
+
+## Configuration file
+
+URL and Serial port number or name you can put to _config.ini_ file.
+
+```
+[DEFAULT]
+URL = https://...
+COM = /dev/ttyUSB0
+```
